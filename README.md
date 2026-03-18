@@ -1,6 +1,6 @@
 # 🏁 Typing Speed Test - Challenge Solution
 
-![Design preview for the Typing Speed Test coding challenge](./preview.jpg)
+![Design preview for the Typing Speed Test coding challenge](./designGuide/preview.jpg)
 
 ## 🚀 Live Preview
 ✨ **Check out the live application here:** 🔗 [**Typing Speed Test Live Demo**](https://hydoor-ahmed.github.io/TypingSpeedTest/)
