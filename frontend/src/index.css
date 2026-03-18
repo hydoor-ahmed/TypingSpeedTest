@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-neutral-900: #121212;
+  --color-neutral-800: #27272a;
+  --color-neutral-500: #71717a;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-000: #ffffff;
+
+  --color-cblue-600: #0ea5e9;
+  --color-cblue-400: #38bdf8;
+
+  --color-cred-500: #e11d48;
+
+  --color-cgreen-500: #16a34a;
+
+  --color-cyellow-400: #facc15;
+
+  --default-font-family: "Sora", sans-serif;
+  --font-sora: "Sora", sans-serif;
+}
+
+body {
+  @apply bg-neutral-900 text-neutral-000
+}
+
+.caret-smooth {
+  position: absolute;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}

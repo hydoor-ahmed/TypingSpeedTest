@@ -1,0 +1,32 @@
+{
+  "easy": [
+    "the", "and", "for", "are", "but", "not", "you", "all", "can", "had",
+    "her", "was", "one", "our", "out", "day", "get", "has", "him", "his",
+    "how", "man", "new", "now", "old", "see", "two", "way", "who", "boy",
+    "did", "its", "let", "put", "say", "she", "too", "use", "add", "big",
+    "boy", "cup", "cut", "dog", "end", "far", "fun", "gap", "hot", "ice",
+    "jam", "key", "leg", "mad", "nap", "odd", "pet", "raw", "sun", "top",
+    "vet", "wet", "yen", "zoo", "act", "bed", "box", "cat", "dry", "ear",
+    "fan", "gym", "hat", "ink", "jog", "kit", "log", "map", "net", "oil",
+    "pig", "red", "sky", "toy", "urn", "van", "web", "yes"
+  ],
+  "medium": [
+    "action", "bright", "camera", "danger", "energy", "family", "garden", "happen", "island", "jungle",
+    "kitchen", "ladder", "market", "nature", "object", "pencil", "quartz", "rabbit", "safety", "tunnel",
+    "urgent", "vessel", "window", "yellow", "zombie", "animal", "basket", "circle", "dinner", "engine",
+    "forest", "guitar", "hammer", "island", "jacket", "kettle", "laptop", "mirror", "needle", "office",
+    "puzzle", "quiet", "river", "shadow", "ticket", "uniform", "volume", "wallet", "xenon", "yacht",
+    "zebra", "branch", "cloud", "dance", "earth", "flavor", "grape", "house", "image", "juice",
+    "knife", "lemon", "music", "north", "ocean", "peace", "quick", "river", "stone", "table",
+    "urban", "voice", "water", "xenon", "yield", "zone"
+  ],
+  "hard": [
+    "abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "axiom", "azure", "bagpipes",
+    "bandwagon", "banjo", "bayou", "beekeeper", "bikini", "blitz", "blizzard", "boggle", "bookworm", "boxcar",
+    "boxful", "buckaroo", "buffalo", "buffoon", "buxom", "buzzard", "buzzing", "buzzwords", "caliph", "cobweb",
+    "cockiness", "croquet", "crypt", "curacao", "cycle", "daiquiri", "dirndl", "disavow", "dizzying", "duplex",
+    "dwarves", "embezzle", "equip", "espionage", "exodus", "faking", "fishhook", "fixable", "fjord", "flapjack",
+    "flopping", "fluffiness", "flyby", "foxglove", "frazzled", "frizzled", "fuchsia", "funny", "gabby", "galaxy",
+    "galvanize", "gazebo", "gypsy", "haiku", "haphazard", "hyphen", "iatrogenic", "icebox", "injury", "ivory"
+  ]
+}
