@@ -10,36 +10,31 @@ const WordsSection = ({
   activeWordIndex,
   results,
 }) => {
-  const ref = useRef(null); // هذا المرجع للـ input
+  const ref = useRef(null);
   const [caretPos, setCaretPos] = useState({ top: 0, left: 0 });
   const activeCharRef = useRef(null);
   const containerRef = useRef(null);
 
-  // دالة إبقاء الفوكس
   const handleKeepFocus = () => {
     if (ref.current) {
       ref.current.focus();
     }
   };
 
-  // حساب مكان المؤشر بكل مرة يتغير فيها الإدخال
   useLayoutEffect(() => {
     if (start && activeCharRef.current && containerRef.current) {
       const charRect = activeCharRef.current.getBoundingClientRect();
       const contRect = containerRef.current.getBoundingClientRect();
 
-      // إضافة الـ 8 بكسل مالتك هنا ثابتة
       const newTop = charRect.top - contRect.top + 8;
       const newLeft = charRect.left - contRect.left;
 
-      // منع القفزات الوهمية (إذا الاحداثيات مو منطقية لا تحدث)
       if (newTop >= 0 && newLeft >= 0) {
         setCaretPos({ top: newTop, left: newLeft });
       }
     }
   }, [typingInput, activeWordIndex, start]);
 
-  // فوكس عند التشغيل
   useEffect(() => {
     if (start && ref.current) {
       ref.current.focus();
@@ -52,7 +47,6 @@ const WordsSection = ({
       onClick={handleKeepFocus}
       className="mt-6 relative flex flex-col flex-1 p-2 cursor-text border border-transparent"
     >
-      {/* واجهة البداية */}
       {!start && (
         <div
           onClick={() => setStart(true)}
@@ -67,7 +61,6 @@ const WordsSection = ({
         </div>
       )}
 
-      {/* المؤشر الناعم - يظهر فقط عند البدء */}
       {start && caretPos.top > 0 && (
         <div
           className="caret-smooth absolute w-[2px] h-[1.2em] bg-cblue-600 animate-pulse z-20 pointer-events-none"
@@ -79,12 +72,10 @@ const WordsSection = ({
         />
       )}
 
-      {/* عرض الكلمات */}
       <div className="px-0.5 max-w-full text-2xl leading-relaxed flex flex-wrap">
         {wordlist[difficulty].map((word, wIdx) => {
           const isActive = wIdx === activeWordIndex;
 
-          // تحديد لون الكلمة بناءً على النتيجة
           let colorClass = "text-neutral-500";
           if (isActive) {
             colorClass = "text-white";
@@ -117,7 +108,6 @@ const WordsSection = ({
                 <span>{word}</span>
               )}
 
-              {/* مرجع للمؤشر عند نهاية الكلمة (انتظار المسطرة) */}
               {isActive && typingInput.length >= word.length && (
                 <span ref={activeCharRef} className="bsolute right-[-4px] top-0 w-1 h-full" />
               )}
@@ -126,7 +116,6 @@ const WordsSection = ({
         })}
       </div>
 
-      {/* الحقل المخفي */}
       <div className="flex justify-center items-center mt-auto mb-12">
         <input
           ref={ref}
