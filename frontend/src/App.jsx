@@ -85,35 +85,28 @@ function App() {
     }, 0);
   }
 
-  // حساب مجموع حروف كل الكلمات اللي حاول يكتبها (المدى اللي وصل له)
   const getTotalAttemptedChars = () => {
-    // نمر فقط على الكلمات اللي صار لها نتيجة في مصفوفة results
     return results.reduce((acc, _, index) => {
       const word = wordlist[difficulty][index];
-      return acc + word.length + 1; // مجموع الحروف "المفروض" يكتبها
+      return acc + word.length + 1;
     }, 0);
   };
 
   // * Word Check Function
   const checkedWord = (value) => {
-    // 1. إذا المستخدم داس مسطرة (Space)
+    // * Space
     if (value.endsWith(" ")) {
       const trimmedValue = value.trim();
       const currentWord = wordlist[difficulty][activeWordIndex];
 
-      // التحقق من صحة الكلمة
       const isCorrect = trimmedValue === currentWord;
 
-      // تحديث الـ state (النتائج والمؤشر)
       setResults((prev) => [...prev, isCorrect]);
       setActiveWordIndex((prev) => prev + 1);
 
-      // أهم خطوة: تصفير الـ Input فوراً 🧹
       setTypingInput("");
 
-      // ملاحظة: لا تطبع الـ results هنا، اطبعها بالـ useEffect إذا ردت تشوفها
     } else {
-      // 2. إذا لسه جاي يكتب حروف عادية
       setTypingInput(value);
     }
   };
